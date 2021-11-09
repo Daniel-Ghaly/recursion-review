@@ -5,13 +5,17 @@ describe('stringifyJSON', function() {
     stringifiableObjects.forEach(function(test) {
       var expected = JSON.stringify(test);
       var result = stringifyJSON(test);
-      expect(result).to.equal(FILL_ME_IN);
+      expect(result).to.equal(expected);
+      console.log(expected === result);
+      console.log(test);
+      console.log(result);
+      console.log(expected);
     });
 
     unstringifiableValues.forEach(function(obj) {
       var expected = JSON.stringify(obj);
       var result = stringifyJSON(obj);
-      expect(result).to.equal(FILL_ME_IN);
+      expect(result).to.equal(expected);
     });
 
   });
